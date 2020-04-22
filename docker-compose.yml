@@ -1,0 +1,19 @@
+version: '2.0'
+
+services:
+  myvue:
+    image: nickbryant/myvue:xigua-1.0.0
+    container_name: myvue
+    restart: always
+    ports:
+      - "8085:8085"
+    volumes:
+      - /etc/timezone:/etc/timezone
+      - /etc/localtime:/etc/localtime
+      - /etc/nginx/conf.d/myvue.conf:/etc/nginx/conf.d/myvue.conf
+    networks:
+      - app-net
+
+networks:
+  app-net:
+    external: true
