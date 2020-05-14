@@ -54,7 +54,7 @@ export default {
 		};
 		return {
 			bgVedio:
-				process.env.VUE_APP_STATIC_URL + "/static/images/Common/bg.mp4",
+				BaseConfig.loginPageBgPath,
 			menuList: [],
 			ruleForm: {
 				userName: "",

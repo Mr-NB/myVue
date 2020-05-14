@@ -48,6 +48,13 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
 
+    if (to.matched.length === 0) {
+        if (window.localStorage.getItem('role') == 1) {
+            next('/admin')
+        } else { next('/common') }
+
+    }
+
     document.title = to.meta.title
     if (!window.localStorage.getItem('token')) {
 

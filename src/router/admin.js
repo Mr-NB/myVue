@@ -15,7 +15,17 @@ export default {
 
                 title: 'Admin User | I Am Future'
             }
+        },
+        {
+            path: 'password/modify',
+            component: () =>
+                import ('@/views/admin/passwordModify'),
+            meta: {
+
+                title: 'Admin PasswordModify | I Am Future'
+            }
         }
+
 
 
 

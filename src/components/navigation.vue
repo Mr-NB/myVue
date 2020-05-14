@@ -57,8 +57,9 @@ export default {
 		handleSelect(key, keyPath, obj) {
 			console.log(obj.route);
 			if (obj.route == "/logout") {
-				window.localStorage.setItem("token", "");
-				window.localStorage.removeItem('config')
+				window.localStorage.removeItem("token");
+				window.localStorage.removeItem("config");
+				window.localStorage.removeItem("user");
 				this.$store.commit("user/USER_INFO", { token: "", user: "" });
 			}
 		}

@@ -49,6 +49,14 @@
 	</div>
 </template>
 
+<style scoped>
+	#adminUserInfo{
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+</style>
+
 <script>
 export default {
 	data() {

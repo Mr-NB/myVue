@@ -32,7 +32,7 @@ export default {
 	name: "About",
 	data() {
 		return {
-			baseUrl: process.env.VUE_APP_STATIC_URL,
+			baseUrl:BaseConfig.rootPaht,
 			currentDate: new Date(),
 			imageList: [],
 			quotes: []

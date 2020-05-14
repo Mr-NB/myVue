@@ -1,12 +1,12 @@
 <template>
 	<div id="adminIndexPage">
-		<el-row type="flex" justify="center"  v-if="$store.state.user.token">
+		<el-row type="flex" justify="center" v-if="$store.state.user.token">
 			<el-col :span="21">
 				<Navigation :menuList="adminMenuList" />
 			</el-col>
 
 			<el-col :span="3">
-				<Navigation :menuList="userMenuList" />
+				<Navigation :menuList="adminCenterList" />
 			</el-col>
 		</el-row>
 		<el-row>
@@ -35,9 +35,9 @@
 				</el-menu>
 			</el-col>
 			<!-- <el-col span="6"> -->
-				<div id="adminContainer">
-					<router-view></router-view>
-				</div>
+			<div id="adminContainer">
+				<router-view></router-view>
+			</div>
 			<!-- </el-col> -->
 		</el-row>
 	</div>
@@ -52,19 +52,19 @@ export default {
 	data() {
 		return {
 			adminMenuList: [],
-			userMenuList: [],
+			adminCenterList: [],
 			adminNavigationList: []
 		};
 	},
 	methods: {
 		getMenuList() {
-			let config =JSON.parse( window.localStorage.getItem('config'))
+			let config = JSON.parse(window.localStorage.getItem("config"));
 			this.adminMenuList = config.adminMenuList;
 
-			let userMenuList = config.userMenuList;
+			let adminCenterList = config.adminCenterList;
 
-			userMenuList[0].title = window.localStorage.getItem("user");
-			this.userMenuList = userMenuList;
+			adminCenterList[0].title = window.localStorage.getItem("user");
+			this.adminCenterList = adminCenterList;
 			this.adminNavigationList = config.adminNavigationList;
 		},
 		handleOpen(key, keyPath) {
@@ -80,7 +80,7 @@ export default {
 };
 </script>
 
-<style>
+<style scope>
 #adminIndexPage {
 	height: 100%;
 	width: 100%;
@@ -88,7 +88,5 @@ export default {
 
 #adminContainer {
 	height: 100%;
-	display: flex;
-	flex-direction: column;
 }
 </style>

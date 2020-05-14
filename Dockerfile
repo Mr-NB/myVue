@@ -6,3 +6,5 @@ FROM nginx
 
 LABEL AUTHOR="Niu Ben<v-beniu@microsoft.com>"
 USER root
+
+COPY ./dist/ /usr/share/nginx/html/
