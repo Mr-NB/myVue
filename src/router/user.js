@@ -9,7 +9,7 @@ export default {
                 import ('@/views/user/Center'),
             meta: {
 
-                title: 'User Center | I Am Future'
+                title: 'User Center'
             }
 
         },
@@ -20,7 +20,7 @@ export default {
                 import ('@/views/user/passwordModify'),
             meta: {
 
-                title: 'Password | I Am Future'
+                title: 'Password'
             }
         }
 

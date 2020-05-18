@@ -4,7 +4,7 @@ export default {
         import ('@/views/admin/Index'),
     meta: {
 
-        title: 'Admin | I Am Future'
+        title: 'Admin'
     },
 
     children: [{
@@ -13,7 +13,7 @@ export default {
                 import ('@/views/admin/User'),
             meta: {
 
-                title: 'Admin User | I Am Future'
+                title: 'Admin User'
             }
         },
         {
@@ -22,9 +22,19 @@ export default {
                 import ('@/views/admin/passwordModify'),
             meta: {
 
-                title: 'Admin PasswordModify | I Am Future'
+                title: 'Admin PasswordModify'
+            }
+        },
+        {
+            path: 'log/:page',
+            component: () =>
+                import ('@/views/admin/Log'),
+            meta: {
+
+                title: 'Log'
             }
         }
+
 
 
 

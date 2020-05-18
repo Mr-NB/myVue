@@ -32,7 +32,7 @@ const router = new VueRouter({
                     import ('@/views/common/Login'),
                 meta: {
 
-                    title: 'I Am Future'
+                    title: 'Login'
                 }
 
             }
@@ -54,8 +54,7 @@ router.beforeEach((to, from, next) => {
         } else { next('/common') }
 
     }
-
-    document.title = to.meta.title
+    document.title = `${to.meta.title} | I Am Future`;
     if (!window.localStorage.getItem('token')) {
 
         store.state.user.token = ''

@@ -10,7 +10,7 @@ export default {
                 import ('@/views/tool/Xigua'),
             meta: {
 
-                title: 'XiGua | I Am Future'
+                title: 'XiGua'
             }
         },
         {
@@ -26,7 +26,7 @@ export default {
                 import ('@/views/tool/vpn'),
             meta: {
 
-                title: 'VPN | I Am Future'
+                title: 'VPN'
             }
         }
 

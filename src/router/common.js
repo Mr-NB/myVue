@@ -5,7 +5,7 @@ export default {
         import ('@/views/common'),
     meta: {
 
-        title: 'Index | I Am Future'
+        title: 'Index'
     },
 
     children: [{
@@ -15,7 +15,7 @@ export default {
                 import ('@/views/common/About'),
             meta: {
 
-                title: 'About ME | I Am Future'
+                title: 'About ME'
             }
         }
 

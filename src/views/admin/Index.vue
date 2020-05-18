@@ -59,6 +59,7 @@ export default {
 	methods: {
 		getMenuList() {
 			let config = JSON.parse(window.localStorage.getItem("config"));
+			console.log(config)
 			this.adminMenuList = config.adminMenuList;
 
 			let adminCenterList = config.adminCenterList;

@@ -61,6 +61,7 @@ export default {
 				window.localStorage.removeItem("config");
 				window.localStorage.removeItem("user");
 				this.$store.commit("user/USER_INFO", { token: "", user: "" });
+				// this.$router.push('/login')
 			}
 		}
 	}
